@@ -83,12 +83,16 @@ export default {
   },
   methods: {
     onSelectOrganization() {
+      this.selected = [];
+      this.members = [];
       if (this.organizationId === null) {
         this.projects = [];
       }
       this.projects = Projects.filter((p) => p.organizationId === this.organizationId);
     },
     onSelectProject() {
+      this.selected = [];
+      this.members = [];
       if (this.projectId === null) {
         this.members = [];
       }
